@@ -8,7 +8,7 @@ on:
       - '**.png'
       - 'index.html'
 jobs: 
-  build_matrix_go:
+  build_push_matrix_go:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
@@ -17,7 +17,7 @@ jobs:
           folder: matrix-go
           name: matrix-go
           tag: latest
-    build_matrix_go:
+  build_matrix_go:
     runs-on: ubuntu-latest
     if: ${{ github.ref != 'refs/heads/main' }}
     steps:
