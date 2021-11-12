@@ -11,9 +11,7 @@ jobs:
   build_push_matrix_go:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/build_push
+    uses: ./.github/actions/build_push
         with:
           folder: matrix-go
           name: matrix-go
