@@ -13,7 +13,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/build_push@main
+      - uses: ./.github/actions/build_push
         with:
           folder: matrix-go
           name: matrix-go
@@ -23,7 +23,7 @@ jobs:
     if: ${{ github.ref != 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/build@main
+      - uses: ./.github/actions/build
         with:
           folder: matrix-go
           name: matrix-go
