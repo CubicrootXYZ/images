@@ -1,2 +1,3 @@
-# images
-Collection of images used by myself
+# Images
+
+Holds image configurations and builds.
