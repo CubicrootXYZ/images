@@ -16,7 +16,6 @@ jobs:
       - uses: ./.github/actions/build_push
         with:
           folder: matrix-go
-          folder: matrix-go
           name: matrix-go
           tag: latest
         secrets:
