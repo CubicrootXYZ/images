@@ -22,3 +22,4 @@ runs:
     steps:
       - name: Build container
         run: docker build -t cubicrootxyz/${{ inputs.name }}:${{ inputs.tag }} ${{ folder }}
+        shell: bash
