@@ -1,0 +1,28 @@
+name: Main
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - 'index.html'
+jobs: 
+  build_matrix_go:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - uses: ./.github/workflows/build_push.yml@main
+        with:
+          folder: matrix-go
+          name: matrix-go
+          tag: latest
+    build_matrix_go:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref != 'refs/heads/main' }}
+    steps:
+      - uses: ./.github/workflows/build.yml@main
+        with:
+          folder: matrix-go
+          name: matrix-go
+          tag: latest
