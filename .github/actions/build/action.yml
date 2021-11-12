@@ -18,6 +18,7 @@ on:
 
 
 runs:
+    using: "composite"
     steps:
       - name: Build container
         run: docker build -t cubicrootxyz/${{ inputs.name }}:${{ inputs.tag }} ${{ folder }}
