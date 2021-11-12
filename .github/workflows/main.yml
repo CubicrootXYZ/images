@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: ./.github/workflows/build_push.yml@main
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/build_push@main
         with:
           folder: matrix-go
           name: matrix-go
@@ -21,7 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.ref != 'refs/heads/main' }}
     steps:
-      - uses: ./.github/workflows/build.yml@main
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/build@main
         with:
           folder: matrix-go
           name: matrix-go

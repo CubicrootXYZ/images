@@ -17,12 +17,8 @@ on:
         type: string
 
 
-jobs:
-  build_and_push_docker:
-    runs-on: ubuntu-latest
+runs:
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
       - name: Build container
         run: docker build -t cubicrootxyz/${{ inputs.name }}:${{ inputs.tag }} ${{ folder }}
       - name: Login to Docker Hub
