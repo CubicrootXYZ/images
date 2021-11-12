@@ -15,6 +15,11 @@ on:
         default: "latest"
         required: false
         type: string
+    secrets:
+      DOCKERHUB_USERNAME:
+        required: true
+      DOCKERHUB_TOKEN:
+        required: true
 
 
 runs:
