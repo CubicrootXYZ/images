@@ -1,6 +1,5 @@
 name: Main
 on:
-on:
   push:
     paths:
       - 'matrix-go'
