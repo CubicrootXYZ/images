@@ -1,4 +1,4 @@
-FROM golang:1.16.0-buster
+FROM golang:1.16-bullseye
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
 
 RUN apt update && apt upgrade -y && \
     apt install -y git gcc && \
-    apt install -s libolm-dev/buster-backports npm/buster-backports -y
+    apt install libolm-dev npm -y
 
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install honnef.co/go/tools/cmd/staticcheck@latest \
