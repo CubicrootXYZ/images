@@ -13,6 +13,7 @@ RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install github.com/swaggo/swag/cmd/swag@latest
 
 RUN npm install redoc 
+RUN npm install redoc-cli
 
 ENV PUSHBITS_HTTP_PORT="8080"
 EXPOSE 8080  
