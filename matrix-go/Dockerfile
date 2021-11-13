@@ -15,7 +15,7 @@ RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
 RUN npm install redoc 
 
 ENV PUSHBITS_HTTP_PORT="8080"
-EXPOSE 8080
+EXPOSE 8080 
 
 RUN curl -fLo install.sh https://raw.githubusercontent.com/cosmtrek/air/master/install.sh \
     && chmod +x install.sh && sh install.sh && cp ./bin/air /bin/air
