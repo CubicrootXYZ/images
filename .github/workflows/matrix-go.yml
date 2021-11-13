@@ -1,12 +1,10 @@
 name: Main
 on:
+on:
   push:
-    paths-ignore:
-      - '**.md'
-      - '**.jpg'
-      - '**.jpeg'
-      - '**.png'
-      - 'index.html'
+    paths:
+      - 'matrix-go'
+      
 jobs: 
   build_push_matrix_go:
     runs-on: ubuntu-latest
