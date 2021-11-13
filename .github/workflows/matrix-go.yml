@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - 'matrix-go'
+      - 'matrix-go/*'
       
 jobs: 
   build_push_matrix_go:
