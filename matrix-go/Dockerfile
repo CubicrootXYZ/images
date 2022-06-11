@@ -1,4 +1,4 @@
-FROM golang:1.16-bullseye
+FROM golang:${GO_VERSION}-bullseye
 
 WORKDIR /app
 
@@ -10,7 +10,8 @@ RUN apt update && apt upgrade -y && \
 
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install honnef.co/go/tools/cmd/staticcheck@latest \
-    && go install github.com/swaggo/swag/cmd/swag@latest
+    && go install github.com/swaggo/swag/cmd/swag@latest \
+    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.46.2
 
 RUN npm install redoc 
 RUN npm install redoc-cli
