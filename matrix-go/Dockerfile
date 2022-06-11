@@ -1,3 +1,5 @@
+ARG GO_VERSION
+
 FROM golang:${GO_VERSION}-bullseye
 
 WORKDIR /app
