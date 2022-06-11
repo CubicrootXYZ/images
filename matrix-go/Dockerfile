@@ -11,7 +11,7 @@ RUN apt update && apt upgrade -y && \
     apt install libolm-dev npm -y
 
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
-    && go install honnef.co/go/tools/cmd/staticcheck@2022.1 \
+    && go install honnef.co/go/tools/cmd/staticcheck@2021.1.2 \
     && go install github.com/swaggo/swag/cmd/swag@latest \
     && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2
 
