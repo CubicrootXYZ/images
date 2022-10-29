@@ -1,4 +1,4 @@
-ARG GO_VERSION=1.16
+ARG GO_VERSION=1.19
 
 FROM golang:${GO_VERSION}-bullseye
 
@@ -13,7 +13,7 @@ RUN apt update && apt upgrade -y && \
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install honnef.co/go/tools/cmd/staticcheck@2021.1.2 \
     && go install github.com/swaggo/swag/cmd/swag@latest \
-    && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2
+    && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.50.1
 
 RUN npm install redoc 
 RUN npm install redoc-cli
