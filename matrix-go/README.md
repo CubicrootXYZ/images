@@ -7,7 +7,7 @@ Based on: debian buster
 ## Included packages
 
 * libolm-dev3
-* go 1.16
+* go 1.19
 * [Redoc](https://github.com/Redocly/redoc)
 * [Staticcheck](https://staticcheck.io/)
 * [Swag](https://github.com/swaggo/swag)
