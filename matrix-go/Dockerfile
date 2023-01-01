@@ -8,7 +8,7 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
 
 RUN apt update && apt upgrade -y && \
     apt install -y git gcc docker && \
-    apt install libolm-dev npm -y
+    apt install libolm-dev npm docker docker-compose -y
 
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install honnef.co/go/tools/cmd/staticcheck@2021.1.2 \
