@@ -15,7 +15,7 @@ RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install github.com/swaggo/swag/cmd/swag@latest \
     && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.50.1
 
-RUN npm install redoc 
+RUN npm install redoc --save --legacy-peer-deps
 RUN npm install redoc-cli
 
 ENV PUSHBITS_HTTP_PORT="8080"
