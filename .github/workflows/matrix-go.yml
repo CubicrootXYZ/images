@@ -2,6 +2,7 @@ on:
   push:
     paths:
       - 'matrix-go/*'
+      - '.github/**'
       
 jobs: 
   build_push_matrix_go_1-19:
