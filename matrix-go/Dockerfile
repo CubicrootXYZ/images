@@ -1,6 +1,6 @@
 ARG GO_VERSION=1.21
 
-FROM golang:${GO_VERSION}-bullseye
+FROM golang:${GO_VERSION}-bookworm
 
 WORKDIR /app
 
