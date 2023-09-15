@@ -13,7 +13,7 @@ RUN apt update && apt upgrade -y && \
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install honnef.co/go/tools/cmd/staticcheck@2021.1.2 \
     && go install github.com/swaggo/swag/cmd/swag@latest \
-    && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.54.2
+    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.54.2
 
 RUN npm install redoc --save --legacy-peer-deps
 RUN npm install redoc-cli
