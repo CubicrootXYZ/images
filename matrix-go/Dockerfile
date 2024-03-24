@@ -1,4 +1,5 @@
 ARG GO_VERSION=1.21
+ARG GOLANGCI_VERSION=1.54.2
 
 FROM golang:${GO_VERSION}-bookworm
 
@@ -13,7 +14,7 @@ RUN apt update && apt upgrade -y && \
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
     && go install honnef.co/go/tools/cmd/staticcheck@2021.1.2 \
     && go install github.com/swaggo/swag/cmd/swag@latest \
-    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.54.2
+    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v${GOLANGCI_VERSION:-1.54.2}
 
 RUN npm install redoc --save --legacy-peer-deps
 RUN npm install redoc-cli
