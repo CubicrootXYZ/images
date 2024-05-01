@@ -5,7 +5,7 @@ FROM golang:${GO_VERSION}-bookworm
 
 WORKDIR /app
 
-RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/backport.list
+RUN echo "deb http://archive.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/backport.list
 
 RUN apt update && apt upgrade -y && \
     apt install -y git gcc docker && \
