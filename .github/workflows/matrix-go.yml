@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - "matrix-go/*"
+      - "matrix-go/**"
       - ".github/**"
 
 jobs:
