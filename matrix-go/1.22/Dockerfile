@@ -5,7 +5,7 @@ WORKDIR /app
 RUN echo "deb http://archive.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/backport.list
 
 RUN apt update && apt upgrade -y && \
-    apt install -y git/buster-backports gcc docker && \
+    apt install -y git/buster-backports gcc docker --allow-downgrades && \
     apt install libolm-dev npm docker docker-compose -y
 
 RUN go install github.com/CubicrootXYZ/openapi-code-sample-generator@latest \
